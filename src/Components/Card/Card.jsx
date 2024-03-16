@@ -4,10 +4,10 @@ import { FaStar } from "react-icons/fa6";
 const Card = () => {
   return (
     <div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 w-full my-12">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 w-full my-12 gap-4">
         <div className="relative mx-auto w-full">
           <Link href="#" className="relative inline-block w-full">
-            <div className="shadow p-2 rounded-lg bg-white">
+            <div className="shadow p-2 rounded-lg">
               <div className="flex justify-center relative rounded-lg overflow-hidden h-44">
                 <div className="transition-transform duration-500 transform ease-in-out hover:scale-105 w-full">
                   <img className="absolute w-full" src={room} alt="" />
@@ -38,7 +38,7 @@ const Card = () => {
         </div>
         <div className="relative mx-auto w-full">
           <Link href="#" className="relative inline-block w-full">
-            <div className="shadow p-2 rounded-lg bg-white">
+            <div className="shadow p-2 rounded-lg">
               <div className="flex justify-center relative rounded-lg overflow-hidden h-44">
                 <div className="transition-transform duration-500 transform ease-in-out hover:scale-105 w-full">
                   <img className="absolute w-full" src={room} alt="" />
@@ -69,7 +69,7 @@ const Card = () => {
         </div>
         <div className="relative mx-auto w-full">
           <Link href="#" className="relative inline-block w-full">
-            <div className="shadow p-2 rounded-lg bg-white">
+            <div className="shadow p-2 rounded-lg">
               <div className="flex justify-center relative rounded-lg overflow-hidden h-44">
                 <div className="transition-transform duration-500 transform ease-in-out hover:scale-105 w-full">
                   <img className="absolute w-full" src={room} alt="" />
@@ -100,7 +100,7 @@ const Card = () => {
         </div>
         <div className="relative mx-auto w-full">
           <Link href="#" className="relative inline-block w-full">
-            <div className="shadow p-2 rounded-lg bg-white">
+            <div className="shadow p-2 rounded-lg">
               <div className="flex justify-center relative rounded-lg overflow-hidden h-44">
                 <div className="transition-transform duration-500 transform ease-in-out hover:scale-105 w-full">
                   <img className="absolute w-full" src={room} alt="" />
@@ -131,7 +131,7 @@ const Card = () => {
         </div>
         <div className="relative mx-auto w-full">
           <Link href="#" className="relative inline-block w-full">
-            <div className="shadow p-2 rounded-lg bg-white">
+            <div className="shadow p-2 rounded-lg">
               <div className="flex justify-center relative rounded-lg overflow-hidden h-44">
                 <div className="transition-transform duration-500 transform ease-in-out hover:scale-105 w-full">
                   <img className="absolute w-full" src={room} alt="" />
@@ -162,7 +162,7 @@ const Card = () => {
         </div>
         <div className="relative mx-auto w-full">
           <Link href="#" className="relative inline-block w-full">
-            <div className="shadow p-2 rounded-lg bg-white">
+            <div className="shadow p-2 rounded-lg">
               <div className="flex justify-center relative rounded-lg overflow-hidden h-44">
                 <div className="transition-transform duration-500 transform ease-in-out hover:scale-105 w-full">
                   <img className="absolute w-full" src={room} alt="" />
@@ -193,7 +193,7 @@ const Card = () => {
         </div>
         <div className="relative mx-auto w-full">
           <Link href="#" className="relative inline-block w-full">
-            <div className="shadow p-2 rounded-lg bg-white">
+            <div className="shadow p-2 rounded-lg">
               <div className="flex justify-center relative rounded-lg overflow-hidden h-44">
                 <div className="transition-transform duration-500 transform ease-in-out hover:scale-105 w-full">
                   <img className="absolute w-full" src={room} alt="" />
@@ -224,7 +224,7 @@ const Card = () => {
         </div>
         <div className="relative mx-auto w-full">
           <Link href="#" className="relative inline-block w-full">
-            <div className="shadow p-2 rounded-lg bg-white">
+            <div className="shadow p-2 rounded-lg">
               <div className="flex justify-center relative rounded-lg overflow-hidden h-44">
                 <div className="transition-transform duration-500 transform ease-in-out hover:scale-105 w-full">
                   <img className="absolute w-full" src={room} alt="" />
@@ -255,7 +255,7 @@ const Card = () => {
         </div>
         <div className="relative mx-auto w-full">
           <Link href="#" className="relative inline-block w-full">
-            <div className="shadow p-2 rounded-lg bg-white">
+            <div className="shadow p-2 rounded-lg">
               <div className="flex justify-center relative rounded-lg overflow-hidden h-44">
                 <div className="transition-transform duration-500 transform ease-in-out hover:scale-105 w-full">
                   <img className="absolute w-full" src={room} alt="" />
@@ -286,7 +286,7 @@ const Card = () => {
         </div>
         <div className="relative mx-auto w-full">
           <Link href="#" className="relative inline-block w-full">
-            <div className="shadow p-2 rounded-lg bg-white">
+            <div className="shadow p-2 rounded-lg">
               <div className="flex justify-center relative rounded-lg overflow-hidden h-44">
                 <div className="transition-transform duration-500 transform ease-in-out hover:scale-105 w-full">
                   <img className="absolute w-full" src={room} alt="" />
@@ -317,7 +317,7 @@ const Card = () => {
         </div>
         <div className="relative mx-auto w-full">
           <Link href="#" className="relative inline-block w-full">
-            <div className="shadow p-2 rounded-lg bg-white">
+            <div className="shadow p-2 rounded-lg">
               <div className="flex justify-center relative rounded-lg overflow-hidden h-44">
                 <div className="transition-transform duration-500 transform ease-in-out hover:scale-105 w-full">
                   <img className="absolute w-full" src={room} alt="" />
@@ -348,7 +348,7 @@ const Card = () => {
         </div>
         <div className="relative mx-auto w-full">
           <Link href="#" className="relative inline-block w-full">
-            <div className="shadow p-2 rounded-lg bg-white">
+            <div className="shadow p-2 rounded-lg">
               <div className="flex justify-center relative rounded-lg overflow-hidden h-44">
                 <div className="transition-transform duration-500 transform ease-in-out hover:scale-105 w-full">
                   <img className="absolute w-full" src={room} alt="" />
@@ -379,7 +379,7 @@ const Card = () => {
         </div>
         <div className="relative mx-auto w-full">
           <Link href="#" className="relative inline-block w-full">
-            <div className="shadow p-2 rounded-lg bg-white">
+            <div className="shadow p-2 rounded-lg">
               <div className="flex justify-center relative rounded-lg overflow-hidden h-44">
                 <div className="transition-transform duration-500 transform ease-in-out hover:scale-105 w-full">
                   <img className="absolute w-full" src={room} alt="" />
@@ -410,7 +410,7 @@ const Card = () => {
         </div>
         <div className="relative mx-auto w-full">
           <Link href="#" className="relative inline-block w-full">
-            <div className="shadow p-2 rounded-lg bg-white">
+            <div className="shadow p-2 rounded-lg">
               <div className="flex justify-center relative rounded-lg overflow-hidden h-44">
                 <div className="transition-transform duration-500 transform ease-in-out hover:scale-105 w-full">
                   <img className="absolute w-full" src={room} alt="" />
@@ -441,7 +441,7 @@ const Card = () => {
         </div>
         <div className="relative mx-auto w-full">
           <Link href="#" className="relative inline-block w-full">
-            <div className="shadow p-2 rounded-lg bg-white">
+            <div className="shadow p-2 rounded-lg">
               <div className="flex justify-center relative rounded-lg overflow-hidden h-44">
                 <div className="transition-transform duration-500 transform ease-in-out hover:scale-105 w-full">
                   <img className="absolute w-full" src={room} alt="" />
@@ -472,7 +472,7 @@ const Card = () => {
         </div>
         <div className="relative mx-auto w-full">
           <Link href="#" className="relative inline-block w-full">
-            <div className="shadow p-2 rounded-lg bg-white">
+            <div className="shadow p-2 rounded-lg">
               <div className="flex justify-center relative rounded-lg overflow-hidden h-44">
                 <div className="transition-transform duration-500 transform ease-in-out hover:scale-105 w-full">
                   <img className="absolute w-full" src={room} alt="" />
@@ -503,7 +503,7 @@ const Card = () => {
         </div>
         <div className="relative mx-auto w-full">
           <Link href="#" className="relative inline-block w-full">
-            <div className="shadow p-2 rounded-lg bg-white">
+            <div className="shadow p-2 rounded-lg">
               <div className="flex justify-center relative rounded-lg overflow-hidden h-44">
                 <div className="transition-transform duration-500 transform ease-in-out hover:scale-105 w-full">
                   <img className="absolute w-full" src={room} alt="" />
@@ -534,7 +534,7 @@ const Card = () => {
         </div>
         <div className="relative mx-auto w-full">
           <Link href="#" className="relative inline-block w-full">
-            <div className="shadow p-2 rounded-lg bg-white">
+            <div className="shadow p-2 rounded-lg">
               <div className="flex justify-center relative rounded-lg overflow-hidden h-44">
                 <div className="transition-transform duration-500 transform ease-in-out hover:scale-105 w-full">
                   <img className="absolute w-full" src={room} alt="" />
@@ -565,7 +565,7 @@ const Card = () => {
         </div>
         <div className="relative mx-auto w-full">
           <Link href="#" className="relative inline-block w-full">
-            <div className="shadow p-2 rounded-lg bg-white">
+            <div className="shadow p-2 rounded-lg">
               <div className="flex justify-center relative rounded-lg overflow-hidden h-44">
                 <div className="transition-transform duration-500 transform ease-in-out hover:scale-105 w-full">
                   <img className="absolute w-full" src={room} alt="" />
@@ -596,7 +596,7 @@ const Card = () => {
         </div>
         <div className="relative mx-auto w-full">
           <Link href="#" className="relative inline-block w-full">
-            <div className="shadow p-2 rounded-lg bg-white">
+            <div className="shadow p-2 rounded-lg">
               <div className="flex justify-center relative rounded-lg overflow-hidden h-44">
                 <div className="transition-transform duration-500 transform ease-in-out hover:scale-105 w-full">
                   <img className="absolute w-full" src={room} alt="" />

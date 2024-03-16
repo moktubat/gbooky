@@ -18,7 +18,7 @@ const NavBar = () => {
       </li>
       <li>
         <NavLink
-          to="/about"
+          to="/login"
           className="flex gap-2 items-center text-sm border-2 border-[#CACACA] p-3 rounded-lg"
         >
           <PiUsersThree /> LOG IN / SIGN UP
@@ -27,7 +27,7 @@ const NavBar = () => {
     </>,
   ];
   return (
-    <div className="px-4 py-5 mx-auto">
+    <div className="px-4 py-5 mx-auto overflow-hidden">
       <div className="relative flex items-center justify-between">
         {/* Logo Section */}
         <Link to="/" className="inline-flex items-center">
