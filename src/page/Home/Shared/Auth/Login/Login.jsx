@@ -1,10 +1,10 @@
-import signUp from "../../../../../assets/signUp.jpg";
+import signIn from "../../../../../assets/signIn.jpg";
 const Login = () => {
   return (
     <div>
       <div className="w-full flex mb-10 mx-4 overflow-hidden">
         <div className="relative hidden lg:block">
-          <img src={signUp} alt="" />
+          <img src={signIn} alt="" />
           <p className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-3xl font-bold pb-32">Multipurpose tool to succeed your business</p>
         </div>
 
@@ -134,7 +134,7 @@ const Login = () => {
             <p className="flex justify-between mt-8">
               <p>Don&apos;t have an account?</p>
               <a
-                href="#"
+                href="register"
                 className="text-[#775DA6] hover:text-[#43345e] font-semibold"
               >
                 Create an account
@@ -146,7 +146,7 @@ const Login = () => {
               <a href="#" className="text-[#775DA6]">
                  Privacy Policy
               </a>{" "}
-              and{" "}
+              and
               <a href="#" className="text-[#775DA6]">
                 Terms of Service
               </a>
