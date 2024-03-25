@@ -1,11 +1,24 @@
+import { useForm } from "react-hook-form";
 import signIn from "../../../../../assets/signIn.jpg";
 const Login = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = (data) => {
+    console.log(data);
+  };
+
   return (
     <div>
       <div className="w-full flex mb-10 mx-4 overflow-hidden">
         <div className="relative hidden lg:block">
           <img src={signIn} alt="" />
-          <p className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-3xl font-bold pb-32">Multipurpose tool to succeed your business</p>
+          <p className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-3xl font-bold pb-32">
+            Multipurpose tool to succeed your business
+          </p>
         </div>
 
         <div className="bg-white w-full md:max-w-md lg:max-w-full md:mx-auto md:w-2/5 h-screen lg:px-16 flex items-center justify-center">
@@ -14,33 +27,42 @@ const Login = () => {
               Log in to your account
             </h1>
 
-            <form className="mt-6" action="#" method="POST">
+            <form className="mt-6" onSubmit={handleSubmit(onSubmit)}>
               <div>
                 <label className="block text-gray-700">Email Address</label>
                 <input
                   type="email"
-                  name=""
-                  id=""
+                  {...register("email", { required: true })}
                   placeholder="Enter Email Address"
-                  className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none"
+                  className={`w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none ${
+                    errors.email ? "border-red-500" : ""
+                  }`}
                   autoFocus
-                  autoComplete
-                  required
+                  autoComplete="off"
                 />
+                {errors.email && (
+                  <p className="text-red-500">Email is required</p>
+                )}
               </div>
 
               <div className="mt-4">
                 <label className="block text-gray-700">Password</label>
                 <input
                   type="password"
-                  name=""
-                  id=""
+                  {...register("password", { required: true, minLength: 6 })}
                   placeholder="Enter Password"
-                  minLength="6"
-                  className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
-                focus:bg-white focus:outline-none"
-                  required
+                  className={`w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none ${
+                    errors.password ? "border-red-500" : ""
+                  }`}
                 />
+                {errors.password && errors.password.type === "required" && (
+                  <p className="text-red-500">Password is required</p>
+                )}
+                {errors.password && errors.password.type === "minLength" && (
+                  <p className="text-red-500">
+                    Password must be at least 6 characters
+                  </p>
+                )}
               </div>
 
               <div className="mt-2">
@@ -144,7 +166,7 @@ const Login = () => {
             <p className="mt-12 text-[#898989]">
               Protected by reCAPTCHA and subject to the Rhombus{" "}
               <a href="#" className="text-[#775DA6]">
-                 Privacy Policy
+                Privacy Policy
               </a>{" "}
               and
               <a href="#" className="text-[#775DA6]">

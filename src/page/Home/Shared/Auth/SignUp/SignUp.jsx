@@ -1,6 +1,16 @@
+import { useForm } from "react-hook-form";
 import signUp from "../../../../../assets/signUp.jpg";
 
 const SignUp = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = (data) => {
+    console.log(data);
+  };
   return (
     <div>
       <div className="w-full flex mb-10 mx-4 overflow-hidden">
@@ -17,33 +27,38 @@ const SignUp = () => {
               Log in to your account
             </h1>
 
-            <form className="mt-6" action="#" method="POST">
+            <form className="mt-6" onSubmit={handleSubmit(onSubmit)}>
               <div className="flex gap-2">
                 <div>
                   <label className="block text-gray-700">First Name</label>
                   <input
                     type="text"
-                    name=""
-                    id=""
+                    {...register("firstName", { required: true })}
                     placeholder="Enter Your First Name"
-                    className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none"
+                    className={`w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none ${
+                      errors.firstName ? "border-red-500" : ""
+                    }`}
                     autoFocus
-                    autoComplete
-                    required
+                    autoComplete="off"
                   />
+                  {errors.firstName && (
+                    <p className="text-red-500">First Name is required</p>
+                  )}
                 </div>
                 <div>
                   <label className="block text-gray-700">Last Name</label>
                   <input
                     type="text"
-                    name=""
-                    id=""
+                    {...register("lastName", { required: true })}
                     placeholder="Enter Your Last Name"
-                    className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none"
-                    autoFocus
-                    autoComplete
-                    required
+                    className={`w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none ${
+                      errors.lastName ? "border-red-500" : ""
+                    }`}
+                    autoComplete="off"
                   />
+                  {errors.lastName && (
+                    <p className="text-red-500">Last Name is required</p>
+                  )}
                 </div>
               </div>
 
@@ -51,28 +66,31 @@ const SignUp = () => {
                 <label className="block text-gray-700">Upload Photo</label>
                 <input
                   type="file"
-                  name=""
-                  id=""
-                  placeholder="Upload Your Photo"
-                  className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none"
+                  {...register("photo", { required: true })}
+                  className={`w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none ${
+                    errors.photo ? "border-red-500" : ""
+                  }`}
                   autoFocus
-                  autoComplete
-                  required
                 />
+                {errors.photo && (
+                  <p className="text-red-500">Photo is required</p>
+                )}
               </div>
-
+              
               <div className="mt-4">
                 <label className="block text-gray-700">Email Address</label>
                 <input
                   type="email"
-                  name=""
-                  id=""
+                  {...register("email", { required: true })}
                   placeholder="Enter Email Address"
-                  className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none"
-                  autoFocus
-                  autoComplete
-                  required
+                  className={`w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none ${
+                    errors.email ? "border-red-500" : ""
+                  }`}
+                  autoComplete="off"
                 />
+                {errors.email && (
+                  <p className="text-red-500">Email is required</p>
+                )}
               </div>
 
               <div className="flex gap-2">
@@ -80,14 +98,20 @@ const SignUp = () => {
                   <label className="block text-gray-700">Password</label>
                   <input
                     type="password"
-                    name=""
-                    id=""
+                    {...register("password", { required: true, minLength: 6 })}
                     placeholder="Enter Your Password"
-                    minLength="6"
-                    className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
-                focus:bg-white focus:outline-none"
-                    required
+                    className={`w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none ${
+                      errors.password ? "border-red-500" : ""
+                    }`}
                   />
+                  {errors.password && errors.password.type === "required" && (
+                    <p className="text-red-500">Password is required</p>
+                  )}
+                  {errors.password && errors.password.type === "minLength" && (
+                    <p className="text-red-500">
+                      Password must be at least 6 characters
+                    </p>
+                  )}
                 </div>
                 <div className="mt-4">
                   <label className="block text-gray-700">
@@ -95,14 +119,27 @@ const SignUp = () => {
                   </label>
                   <input
                     type="password"
-                    name=""
-                    id=""
+                    {...register("confirmPassword", {
+                      required: true,
+                      minLength: 6,
+                    })}
                     placeholder="Enter Your Password"
-                    minLength="6"
-                    className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
-                focus:bg-white focus:outline-none"
-                    required
+                    className={`w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none ${
+                      errors.confirmPassword ? "border-red-500" : ""
+                    }`}
                   />
+                  {errors.confirmPassword &&
+                    errors.confirmPassword.type === "required" && (
+                      <p className="text-red-500">
+                        Confirm Password is required
+                      </p>
+                    )}
+                  {errors.confirmPassword &&
+                    errors.confirmPassword.type === "minLength" && (
+                      <p className="text-red-500">
+                        Password must be at least 6 characters
+                      </p>
+                    )}
                 </div>
               </div>
 
