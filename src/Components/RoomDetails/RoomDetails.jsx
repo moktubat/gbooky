@@ -23,7 +23,7 @@ import Map from "./Map";
 const RoomDetails = () => {
   return (
     <div className="px-3 py-4 bg-[#EBF0F4]">
-      <div>
+      <div className="container mx-auto">
         <h1 className="font-semibold text-[32px] text-black">
           Cosy vibes in central Vesterbro
         </h1>

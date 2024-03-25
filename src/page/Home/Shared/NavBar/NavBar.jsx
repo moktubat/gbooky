@@ -27,8 +27,8 @@ const NavBar = () => {
     </>,
   ];
   return (
-    <div className="px-4 py-5 mx-auto overflow-hidden">
-      <div className="relative flex items-center justify-between">
+    <div className="px-4 py-5 overflow-hidden">
+      <div className="relative flex items-center justify-between container mx-auto">
         {/* Logo Section */}
         <Link to="/" className="inline-flex items-center">
           <img src={logo} alt="logo" />

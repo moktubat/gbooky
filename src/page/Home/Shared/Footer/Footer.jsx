@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <div>
       <footer className="py-16 text-white bg-[#1E1E1E]">
-        <div className="mx-36">
+        <div className="container mx-auto">
           <div>
             <div className="grid grid-cols-1 gap-4 text-sm sm:grid-cols-3 sm:gap-10 md:grid-cols-4 border-b-2 border-gray-400">
               <div>

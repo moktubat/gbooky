@@ -75,7 +75,7 @@ const Category = () => {
   };
   return (
     <div className="w-full">
-      <div className="w-full flex mx-3">
+      <div className="w-full flex container mx-auto">
         <div className="flex justify-between gap-10">
           <div className="flex flex-col items-center">
             <img className="w-8 h-8" src={luxury} alt="" />
